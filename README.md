@@ -11,7 +11,8 @@ the globe's own lights remain, and the candle in the stable, still flickering ov
 
 Merry Christmas and a Happy New Year 2027 to the MEGA65 Community.
 
-Version 1.0, 7 November 2026.
+Version 1.1, 13 November 2026: the music box tuned in Vallotti's temperament; T changes to equal
+temperament and back.
 
 ![The keys and the season's wishes, before the globe](docs/the-snow-globe-instructions.png)
 
@@ -28,7 +29,7 @@ timed by the frame, and NTSC has not been tried.
 2. `MOUNT "SNOWGLOBE.D81"`
 3. `LOAD"*",8,1`, then `RUN`
 
-The disk's SHA-256: `b837f20b39115bf8235821ccf4fd2614e4a2c750392eda5c9de252e663ec2138`.
+The disk's SHA-256: `c5936707611605d455d65b10488cd2b51070ccdeba4e3f4d62c0acc86942a3d4`.
 
 The opening card; the files load; the splash with the keys and the season's wishes, until SPACE or
 FIRE; then the globe. While it runs it borrows the memory of the ROM's copy (the hypervisor lifts
@@ -42,6 +43,7 @@ and ends.
 | SPACE or FIRE | shake the globe |
 | CRSR left and right, or the stick | the carol before, the next |
 | M | the music, off and on |
+| T | the tuning: Vallotti's temperament (at the start) or equal temperament; the plaque names it |
 | A | a shake as each carol begins, off and on (on at the start) |
 | L | the room's light, off and on |
 | H | help / instructions: the splash again, the globe paused; SPACE or FIRE: back to it |
@@ -64,7 +66,9 @@ Both joystick ports work. RESTORE and the Freezer silence the SIDs; the music co
   fading in and out. L turns the room's light off and fades the picture to the dark one.
 - **The music box.** 128 carols, shuffled, every one before any repeats, most of them played twice;
   plucked on twelve voices of the four SIDs, the comb's click and its ring. The title is engraved on the
-  plaque letter by letter and fades. No samples. The carols and their makers: [CAROLS.md](CAROLS.md).
+  plaque letter by letter and fades. No samples. Tuned in Vallotti's temperament, a well temperament in
+  which every key has its own colour, with A at 440 Hz; T changes to equal temperament and back. The
+  carols and their makers: [CAROLS.md](CAROLS.md).
 - **The picture.** The scene is rendered with Blender from a scene built in code, and shown on the
   80 x 50 text screen in full-colour characters: 640 x 400 pixels in 256 colours, with a second
   palette for the room in the dark.
@@ -87,12 +91,14 @@ A MEGA65 (R6A) in PAL, core 890-sdcard-native build #63 (commit 1c737937), ROM 9
 
 ## Credits
 
-The Snow Globe 1.0, 2026, by Dawid Blachowski, with Claude, Anthropic's AI.
+The Snow Globe 1.1, 2026, by Dawid Blachowski, with Claude, Anthropic's AI.
 psinco. A Software Atelier from Luxembourg.
 
 - Written with Claude, Anthropic's AI, which wrote the code, built the scene, arranged the carols and
   drew the splash under Dawid Blachowski's direction.
 - The scene rendered with Blender.
+- The tuning: Vallotti's temperament as it is known today, chosen by Dawid Blachowski by ear on the
+  MEGA65.
 - The carols: music by composers and arrangers who died before 1926, published before 1931; the words
   not used. Read from Benjamin Bloomfield's collection of Christmas carols (LilyPond), which its maker
   gives to the public domain. Each carol and its makers: [CAROLS.md](CAROLS.md).
